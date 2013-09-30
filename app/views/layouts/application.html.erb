@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RailsTemplate</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="row-fluid">
+    <%= render 'layouts/user_header' %>
+    <h3 class="muted"><%= link_to "SimpleDevise", root_path %></h3>
+    <h5 class="muted">A demo of using SimpleDB with Devise</h5>
+  </div>
+  <hr />
+  <%= yield %>
+</div>
+
+</html>
