@@ -1,7 +1,13 @@
 RailsTemplate::Application.routes.draw do
   
+  
   scope '/admin' do
     devise_for :users
+
+    get "dashboard/index"
+
+    root :to => 'dashboard#index', as: :admin_login
+
   end
   
   # get "site/index"
